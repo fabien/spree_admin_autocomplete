@@ -4,7 +4,7 @@ Adds autocompletion to ProductProperty values, from previously used values.
 
 If the SpreeProductTranslations extension is installed, it will be aware of localized values.
 
-**WORK IN PROGRESS**
+Future releases could target other sections of the admin area to autocomplete.
 
 ## Installation
 
