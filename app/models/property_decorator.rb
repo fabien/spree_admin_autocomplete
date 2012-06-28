@@ -1,5 +1,5 @@
-Property.class_eval do
+Spree::Property.class_eval do
   
-  scope :by_name, lambda { |name| where("lower(properties.name) = ?", name.downcase) }
+  scope :by_name, lambda { |name| where("lower(spree_properties.name) = ?", name.downcase) }
   
 end
