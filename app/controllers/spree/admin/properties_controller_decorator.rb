@@ -6,7 +6,7 @@ module Spree
         @property = Property.by_name(params[:property]).first
         if @property
           if ProductProperty.respond_to?(:translation_class)
-            scope = ProductProperty.translation_class.select("DISTINCT(value)").where('product_property_id IN (?)', @property.product_properties.map { |p| p.id }).order("value")
+            scope = ProductProperty.translation_class.select("DISTINCT(value)").where('spree_product_property_id IN (?)', @property.product_properties.map { |p| p.id }).order("value")
             scope = scope.where(:locale => params[:locale]) if params[:locale]
           else
             scope = ProductProperty.select("DISTINCT(value)").where("property_id = ?", @property).order("value")
